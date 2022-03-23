@@ -1,0 +1,260 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body{
+    width: 100%;
+    height: 100%;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+body {
+    align-items: center;
+    justify-content: center;
+    font-family: Arial;
+    background-color: black;
+    background-size: auto;
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+.logo img{
+    height: 150px;
+    width: 350;
+}
+
+#icone-search img{
+width: 20px;
+height: 20px;
+margin-top: 10px;
+margin-left: 25px;
+}
+
+nav{
+    background: rgb(196, 18, 18);
+    padding: 0 10px;
+    justify-content: space-between;
+    align-items: 0;    
+}
+h1, p{
+    color: rgb(255, 255, 255);
+}
+nav, ul {
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+    color: rgb(252, 248, 248);
+    margin-right: 25px;
+
+}
+
+li {
+    padding: 0 20px;
+   display: flex;
+}
+li:hover {
+    cursor: pointer;
+    opacity: 0.9;
+    background-color: rgb(8, 8, 8);
+}
+input[type=radio]{
+    display: flexbox;
+}
+.card img{
+    width: 100%;
+    height: 70%;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-left:350px;
+    margin-top: 0%;
+
+}
+.card{
+    position: absolute;
+    width: 140%;
+    height: 100%;
+    left: 0;
+    right: 3;
+    margin: auto;
+    cursor:pointer ;
+    transition: transform 0.4s ease;
+    -moz-animation: all 0.2s ease;
+}
+.container{
+    width: 100%;
+    height: 100%;
+    max-width: 505px;
+    max-height: 600px;
+    display: flex;
+    transform-style: preserve-3d ;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+   
+.cards{
+    position: relative;
+    width: 100%;
+    height: 150%;
+    margin-bottom: 1px;
+}
+.card h1{
+    position: static;
+    left: 300px;
+    border-bottom-right-radius: 10px;
+    background-color: linear-gradient(180deg);
+    font-size: large;
+    margin-left: 350px;
+}
+
+#item-1:checked ~ .cards #song-3 ,
+#item-2:checked ~ .cards #song-1 ,
+#item-3:checked ~ .cards #song-2{
+    transform: translateX(-60%) scale(0.8);
+    opacity: 0.2;
+    z-index: 0;
+}
+#item-1:checked ~ .cards #song-2 ,
+#item-2:checked ~ .cards #song-3,
+#item-3:checked ~ .cards #song-1{
+    transform: translateX(60%) scale(0.8);
+    opacity: 0.2;
+    z-index: 0;
+}
+
+#item-1:checked ~ .cards #song-1 ,
+#item-2:checked ~ .cards #song-2 ,
+#item-3:checked ~ .cards #song-3{
+    transform: translateX(0) scale(1);
+    opacity: 1;
+    z-index: 1;
+}
+
+#item-1:checked ~ .cards #song-1 img,
+#item-2:checked ~ .cards #song-2 img,
+#item-2:checked ~ .cards #song-3 img,{
+    box-shadow: 2px 2px 5px 0px #ff0000;
+}
+.texto {
+    text-align: center;
+    margin-left: 100px;
+    margin-right: 100px;
+    letter-spacing: 5px;
+    line-height: 1.5;
+    text-shadow: 2px 2px rgb(5, 5, 5);
+}
+#pic1 img{
+    height: 320px;
+    width: 380px;
+    margin: 2px;
+    border: 1px solid rgb(8, 8, 8);
+    float: right;
+    -moz-transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+	transition: all 0.3s
+   
+}
+#pic1:hover img{
+    -moz-transform: scale(1.1);
+	-webkit-transform: scale(1.1);
+	transform: scale(1.1);
+    border-radius: 10px;
+}
+#pic1 h1{
+font-size: large;
+line-height: 1.5;
+}
+#pics embed{
+    height: 640px;
+    width: 650px;
+    margin: 2px;
+    border: 1px solid rgb(8, 8, 8);
+    float: right;   
+}
+footer{
+    position: relative;
+    width: 100%;
+    min-height: 100px;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 150px;
+}
+footer .social_icon,
+footer .menu{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    flex-wrap: wrap;
+}
+footer .social_icon li,
+footer .menu li{
+    list-style: none;
+}
+footer .social_icon li a,
+footer .menu li a
+{
+    font-size: 2em;
+    color: aliceblue;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+}
+footer .social_icon li a:hover{
+    transform: translateY(-10px);
+}
+footer. menu li a{
+    font-size: 1.2em;
+    color: aliceblue;
+    margin: 0 10px;
+    display: inline-block;
+    text-decoration: none;
+    opacity: 0.75;
+}
+footer .menu li a:hover{
+    opacity: 1;
+}
+footer p{
+    color: aliceblue;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+footer .wave
+{
+    position: absolute;
+    top: 10;
+    left: 0;
+    width: 1325px;
+    height: 50px;
+    background: url('./img/wave1.webp');
+    background-size: 1000px 100px; 
+}
+footer .wave#wave1{
+    z-index: 1000;
+    opacity: 1;
+    bottom: 0;
+    animation: animatewave 4s linear infinite;
+}
+@keyframes animatewave
+{
+    0%
+   {
+       background-position-x: 1000px;
+   }
+   100%
+   {
+    background-position-x: 0px;
+   }
+}
